@@ -1,91 +1,237 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <title>Совместимость по картам Таро</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="css/reading.css" type="text/css">
-    <script defer src="js/scripts.js"></script>
-    <script defer src="js/compatibility.js"></script>
-  </head>
-  <body>
-    <div class="page" id="top">
-      <header class="hero">
-        <a class="hero__brand" href="splash.html" aria-label="Вернуться на главную">Madame Sosotris</a>
-        <p class="hero__subtitle">Мистический расклад для тех, кто ищет ответы вместе.</p>
-      </header>
-
-      <main class="layout">
-        <section class="panel panel--intro" aria-labelledby="intro-title">
-          <h1 id="intro-title" class="panel__title">Совместимость по картам Таро</h1>
-          <p class="panel__text">
-            Введите имена и даты рождения, чтобы получить персональный расклад: карты покажут магию вашей связи,
-            подскажут, где скрываются тени, и подарят совет для гармонии.
-          </p>
-        </section>
-
-        <section class="panel panel--form" aria-labelledby="compatibility-form-title">
-          <h2 id="compatibility-form-title" class="panel__subtitle">Данные для анализа</h2>
-          <form id="compatibility-form" class="reading-form" novalidate>
-            <div class="form-grid">
-              <fieldset class="form-card">
-                <legend>Вы</legend>
-                <label class="form-label" for="user-name">Имя</label>
-                <input class="form-input" id="user-name" name="userName" type="text" placeholder="Например, Анна" required>
-                <label class="form-label" for="user-birthday">Дата рождения</label>
-                <input class="form-input" id="user-birthday" name="userBirthday" type="date" required>
-              </fieldset>
-              <fieldset class="form-card">
-                <legend>Партнёр</legend>
-                <label class="form-label" for="partner-name">Имя</label>
-                <input
-                  class="form-input"
-                  id="partner-name"
-                  name="partnerName"
-                  type="text"
-                  placeholder="Например, Алексей"
-                  required
-                >
-                <label class="form-label" for="partner-birthday">Дата рождения</label>
-                <input class="form-input" id="partner-birthday" name="partnerBirthday" type="date" required>
-              </fieldset>
-            </div>
-            <div class="form-actions">
-              <button class="cta-button" type="submit">Проверить совместимость</button>
-            </div>
-            <p class="form-hint" data-hint role="alert" aria-live="assertive"></p>
-          </form>
-        </section>
-
-        <section id="compatibilityResult" class="panel panel--results" aria-live="polite" hidden>
-          <div class="results__summary">
-            <h2 class="results__title">Итоги расклада</h2>
-            <p id="compatibility-summary" class="results__text"></p>
-            <ul id="compatibility-highlights" class="results__highlights"></ul>
-          </div>
-          <div class="results__cards">
-            <h3 class="results__subtitle">Карты расклада</h3>
-            <div id="cards-container" class="cards-grid" aria-live="polite"></div>
-          </div>
-          <div class="results__advice">
-            <h3 class="results__subtitle">Совет от Таро</h3>
-            <p id="compatibility-advice" class="results__text"></p>
-          </div>
-        </section>
-      </main>
-
-      <footer class="page-footer">
-        <a class="back-to-top" href="#top">Вернуться к началу</a>
-      </footer>
-    </div>
-  </body>
-</html>
+diff --git a/reading.html b/reading.html
+index 2a9b81d8c21dcfb62bcee6a3ed2d93791cf1f771..de722f263977936f862e702c49bfc4ef93532010 100644
+--- a/reading.html
++++ b/reading.html
+@@ -1,146 +1,91 @@
+ <!doctype html>
+-<html lang="en">
+-    <head>
+-        <meta charset='utf-8'>
+-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-        <meta http-equiv="X-UA-Compatible" content="id=edge">
+-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+-        <link rel="manifest" href="/manifest.webmanifest">
+-        <title>Madame Sosotris</title>
+-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+-        <link rel="stylesheet" href="css/reading.css" type="text/css">
+-        <script src="js/jquery-3.3.1.js"></script>
+-        <script src="js/bootstrap.bundle.min.js"></script>
+-        <script src="js/scripts.js"></script>
+-        <script src="js/tarot-cards.js"></script>
++<html lang="ru">
++  <head>
++    <meta charset="utf-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <meta http-equiv="X-UA-Compatible" content="ie=edge">
++    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
++    <link rel="manifest" href="/manifest.webmanifest">
++    <title>Совместимость по картам Таро</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com">
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++    <link
++      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
++      rel="stylesheet"
++    >
++    <link rel="stylesheet" href="css/reading.css" type="text/css">
++    <script defer src="js/scripts.js"></script>
++    <script defer src="js/compatibility.js"></script>
++  </head>
++  <body>
++    <div class="page" id="top">
++      <header class="hero">
++        <a class="hero__brand" href="splash.html" aria-label="Вернуться на главную">Madame Sosotris</a>
++        <p class="hero__subtitle">Мистический расклад для тех, кто ищет ответы вместе.</p>
++      </header>
+ 
+-    </head>
+-    <body>
+-           <!-- Disgusting bootstrap modal-->
+-        <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+-            <div class="modal-dialog" role="document">
+-              <div class="modal-content">
+-                <div class="modal-header">
+-                  <h5 class="modal-title" id="explanationModalLabel"><span class="card_name_here"></span>
+-                  </h5>
+-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+-                    <span aria-hidden="true">&times;</span>
+-                  </button>
+-                </div>
+-                <div class="modal-body">
+-                  <span class="img_here"></span>
+-                  <div id="upright_meaning_div">
+-                    <h6>Upright Keywords</h6>
+-                    <p class="small"><span class="upright_meaning_here"></span></p>
+-                  </div>
+-                  <div id="reversed_meaning_div">
+-                    <h6>Reversed Keywords</h6>
+-                    <p class="small"><span class="reversed_meaning_here"></span></p>
+-                  </div>
+-                  <h6>Description</h6>
+-                  <p><span class="meta_description_here"></span></p>
+-                <div class="modal-footer">
+-                  <span class="more_info_link_here"></span>
+-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+-                </div>
+-              </div>
+-            </div>
+-          </div>
+-        </div>
+-        <div class="wrapper">
+-            <div class="header">
+-                <h1 onclick="goHome()">Madame Sosotris</h1>
+-                <hr>
+-            </div>
+-            <!-- Here is the menu for selecting a spread-->
+-            <div id="spread_selection">
+-                <div class="rule_of_three">
+-                    <h6>Rule of Three</h6>
+-                    <p>A reading which offers one card each for the past, present, and future</p>
+-                </div>
+-                <div class="true_love">
+-                    <h6>True Love</h6>
+-                    <p>A reading which offers advice about our love lives</p>
+-                </div>
+-                <div class="success">
+-                    <h6>Success</h6>
+-                    <p>A reading which offers insights into our current professional and personal struggles</p>
+-                </div>
+-            </div>
+-            <!--Here is the deck div-->
+-            <div id="deck_here">
+-                <div id="deck_area">
+-                    <img src="img/tarot_deck.jpg" class="deck rounded" alt="The back of the tarot deck." id="deckDraw">
+-                </div>
+-            </div>
+-                <!--Here are the different spreads designed to display properly with horrible bootstrap-->
+-            <div class="spread_display">
+-                <!--Three card spread-->
+-                <div id="rule_of_three">
+-                    <p class="card_position"><span class="1_description"></span></p>
+-                    <span class="1"></span>
+-                    <p class="card_position"><span class="2_description"></span></p>
+-                    <span class="2"></span>
+-                    <p class="card_position"><span class="3_description"></span></p>
+-                    <span class="3"></span>
+-                </div>
+-                <!--True Love Spread-->
+-                <div id="true_love_spread">
+-                    <div id="tl_first_card">
+-                        <p class="card_position"><span class="1_description"></span></p>
+-                        <span class="1"></span>
+-                    </div>
+-                    <div id="tl_second_card">
+-                        <p class="card_position"><span class="2_description"></span></p>
+-                        <span class="2"></span>
+-                    </div>
+-                    <div id="tl_third_card">
+-                        <p class="card_position"><span class="3_description"></span></p>
+-                        <span class="3"></span>
+-                    </div>
+-                    <div id="tl_fourth_card">
+-                        <p class="card_position"><span class="4_description"></span></p>
+-                        <span class="4"></span>
+-                    </div>
+-                    <div id="tl_fifth_card">
+-                        <p class="card_position"><span class="5_description"></span></p>
+-                        <span class="5"></span>
+-                    </div>
+-                    <div id="tl_sixth_card">
+-                        <p class="card_position"><span class="6_description"></span></p>
+-                        <span class="6"></span>
+-                    </div>
+-                </div>
+-                <!--Success Spread-->
+-                <div id="success_spread">
+-                    <div id="suc_fourth">
+-                        <p class="card_position"><span class="4_description"></span></p>
+-                        <span class="4"></span>
+-                    </div>
+-                    <div id="suc_second">
+-                        <p class="card_position"><span class="2_description"></span></p>
+-                        <span class="2"></span>
+-                    </div>
+-                    <div id="suc_first">
+-                        <p class="card_position"><span class="1_description"></span></p>
+-                        <span class="1"></span>
+-                    </div>
+-                    <div id="suc_third">
+-                        <p class="card_position"><span class="3_description"></span></p>
+-                        <span class="3"></span>
+-                    </div>
+-                    <div id="suc_fifth">
+-                        <p class="card_position"><span  class="5_description"></span></p>
+-                        <span class="5"></span>
+-                    </div>
+-                </div>
++      <main class="layout">
++        <section class="panel panel--intro" aria-labelledby="intro-title">
++          <h1 id="intro-title" class="panel__title">Совместимость по картам Таро</h1>
++          <p class="panel__text">
++            Введите имена и даты рождения, чтобы получить персональный расклад: карты покажут магию вашей связи,
++            подскажут, где скрываются тени, и подарят совет для гармонии.
++          </p>
++        </section>
++
++        <section class="panel panel--form" aria-labelledby="compatibility-form-title">
++          <h2 id="compatibility-form-title" class="panel__subtitle">Данные для анализа</h2>
++          <form id="compatibility-form" class="reading-form" novalidate>
++            <div class="form-grid">
++              <fieldset class="form-card">
++                <legend>Вы</legend>
++                <label class="form-label" for="user-name">Имя</label>
++                <input class="form-input" id="user-name" name="userName" type="text" placeholder="Например, Анна" required>
++                <label class="form-label" for="user-birthday">Дата рождения</label>
++                <input class="form-input" id="user-birthday" name="userBirthday" type="date" required>
++              </fieldset>
++              <fieldset class="form-card">
++                <legend>Партнёр</legend>
++                <label class="form-label" for="partner-name">Имя</label>
++                <input
++                  class="form-input"
++                  id="partner-name"
++                  name="partnerName"
++                  type="text"
++                  placeholder="Например, Алексей"
++                  required
++                >
++                <label class="form-label" for="partner-birthday">Дата рождения</label>
++                <input class="form-input" id="partner-birthday" name="partnerBirthday" type="date" required>
++              </fieldset>
+             </div>
+-            <div class="footer">
+-              <div class="new_reading_button">
+-                <hr>
+-                <a href="reading.html" class="btn btn-dark">Try a Different Reading</a>
+-              </div>
++            <div class="form-actions">
++              <button class="cta-button" type="submit">Проверить совместимость</button>
+             </div>
+-        </div>
+-    </body>
++            <p class="form-hint" data-hint role="alert" aria-live="assertive"></p>
++          </form>
++        </section>
++
++        <section id="compatibilityResult" class="panel panel--results" aria-live="polite" hidden>
++          <div class="results__summary">
++            <h2 class="results__title">Итоги расклада</h2>
++            <p id="compatibility-summary" class="results__text"></p>
++            <ul id="compatibility-highlights" class="results__highlights"></ul>
++          </div>
++          <div class="results__cards">
++            <h3 class="results__subtitle">Карты расклада</h3>
++            <div id="cards-container" class="cards-grid" aria-live="polite"></div>
++          </div>
++          <div class="results__advice">
++            <h3 class="results__subtitle">Совет от Таро</h3>
++            <p id="compatibility-advice" class="results__text"></p>
++          </div>
++        </section>
++      </main>
++
++      <footer class="page-footer">
++        <a class="back-to-top" href="#top">Вернуться к началу</a>
++      </footer>
++    </div>
++  </body>
+ </html>
