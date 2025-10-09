@@ -1,4 +1,4 @@
-const rider_waite_cards =
+var rider_waite_cards = window.rider_waite_cards ||
 [
   {
     name:'The Fool',
@@ -781,6 +781,8 @@ const rider_waite_cards =
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/king-of-swords/`
   }
 ]
+
+window.rider_waite_cards = rider_waite_cards;
 const spread_position_description = [
   {
     name: `true_love`,

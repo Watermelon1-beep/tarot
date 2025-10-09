@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Итоги совместимости — Madame Sosotris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/reading.css" type="text/css">
+    <script defer src="js/scripts.js"></script>
+    <script defer src="js/compatibility.js"></script>
+  </head>
+  <body data-page="compatibility-results">
+    <div class="page" id="top">
+      <header class="hero">
+        <a class="hero__brand" href="splash.html" aria-label="Вернуться на главную">Madame Sosotris</a>
+        <p class="hero__subtitle">Встречайте послание карт, раскрывающее энергию вашего союза.</p>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--intro" aria-labelledby="results-title">
+          <h1 id="results-title" class="panel__title">Итоги совместимости</h1>
+          <p class="panel__text">
+            Карты Таро уже готовы поделиться своим видением. Ниже вы увидите общий вывод, расшифровку ключевых карт и совет,
+            который поможет сохранить гармонию и усилить взаимопонимание.
+          </p>
+          <div class="results-meta">
+            <p class="results-meta__names" data-pair-names aria-live="polite"></p>
+            <p class="results-meta__dates" data-pair-dates></p>
+            <p class="results-meta__message" data-results-hint role="status" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section id="compatibilityResult" class="panel panel--results" aria-live="polite" hidden>
+          <div class="results__summary">
+            <h2 class="results__title">Общий итог</h2>
+            <p id="compatibility-summary" class="results__text"></p>
+            <ul id="compatibility-highlights" class="results__highlights"></ul>
+          </div>
+          <div class="results__cards">
+            <h3 class="results__subtitle">Карты расклада</h3>
+            <div id="cards-container" class="cards-grid" aria-live="polite"></div>
+          </div>
+          <div class="results__advice">
+            <h3 class="results__subtitle">Совет от Таро</h3>
+            <p id="compatibility-advice" class="results__text"></p>
+          </div>
+        </section>
+
+        <section class="panel panel--cta" aria-labelledby="cta-title">
+          <h2 id="cta-title" class="panel__subtitle">Хотите новый расклад?</h2>
+          <p class="panel__text">
+            Вернитесь на страницу ввода данных, чтобы снова выбрать даты рождения и получить свежий расклад для вашей пары.
+          </p>
+          <a class="cta-button cta-button--ghost" href="reading.html">Назад к форме</a>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <a class="back-to-top" href="#top">Вернуться к началу</a>
+      </footer>
+    </div>
+  </body>
+</html>
