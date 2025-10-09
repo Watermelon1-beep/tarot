@@ -1,9 +1,13 @@
   const body = document.body;
+  const pageType = body ? body.getAttribute('data-page') : null;
+
+  const body = document.body;
   if (!body) {
     return;
   }
 
   const pageType = body.getAttribute('data-page');
+
   const STORAGE_KEY = 'tarotCompatibilitySubmission';
   const SUBMISSION_TTL = 1000 * 60 * 30; // 30 minutes
 
@@ -452,6 +456,7 @@
   if (pageType === 'compatibility-results') {
     runResultsPage();
   }
+
 +  const form = document.getElementById('compatibility-form');
 +  const hint = document.querySelector('[data-hint]');
 +  const resultsSection = document.getElementById('compatibilityResult');
@@ -728,3 +733,4 @@
 +  };
 +
 +  form.addEventListener('submit', handleSubmit);
+
